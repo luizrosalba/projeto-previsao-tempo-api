@@ -15,7 +15,7 @@
     },
     "component-class-suffix": [
       true,
-      "Component",
+      "Component", /// permite criar componentes com sufixo de pagina  ajuda na separacao por nomeclatura das responsabilidades
       "Page"
     ],
     "contextual-lifecycle": true,

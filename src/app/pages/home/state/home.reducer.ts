@@ -14,14 +14,16 @@ export const homeInitialState: HomeState = {
   error: false,
 }
 
+///on = quando 
+/// 
 const reducer = createReducer(
   homeInitialState,
   on(fromHomeActions.clearHomeState, () => homeInitialState),
   on(
-    fromHomeActions.loadCurrentWeather,
-    fromHomeActions.loadCurrentWeatherById,
+    fromHomeActions.loadCurrentWeather,  /// quando mudar 
+    fromHomeActions.loadCurrentWeatherById, /// quando mudar ir 
     state => ({
-      ...state,
+      ...state, /// novo esatdo 
       loading: true,
       error: false,
     }),
@@ -38,6 +40,7 @@ const reducer = createReducer(
   })),
 );
 
+/// recebe um estado e uma action e retorna um HomeState novo 
 export function homeReducer(state: HomeState | undefined, action: Action): HomeState {
   return reducer(state, action);
 }

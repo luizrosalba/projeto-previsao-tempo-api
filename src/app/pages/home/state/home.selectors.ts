@@ -1,6 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { HomeState } from './home.reducer';
 
+/// chave da prop do module 
 export const selectHomeState = createFeatureSelector('home');
 
 export const selectCurrentWeather = createSelector(

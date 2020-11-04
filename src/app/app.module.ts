@@ -27,10 +27,10 @@ import { CustomRouterSerializer } from './shared/state/router/router.reducer';
     HttpClientModule,
     HomeModule,
     BookmarksModule,
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot(reducers), /// reducer global -se o usuario fez login , as informações da rota , tudo que vai ser acessado globalmente , linguagem ...etc 
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([]),
-    StoreRouterConnectingModule.forRoot({ serializer: CustomRouterSerializer }),
+    StoreRouterConnectingModule.forRoot({ serializer: CustomRouterSerializer }), /// salvar a rota na store 
   ],
   providers: [],
   bootstrap: [AppComponent]

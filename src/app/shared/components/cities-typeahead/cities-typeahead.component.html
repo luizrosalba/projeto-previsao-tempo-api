@@ -10,8 +10,14 @@
        class="form-control"
        placeholder="Pesquisar">
 
+
+       
 <div *ngIf="loading">Carregando</div>
 
+
+<!-- injetando um template para renderizar o typeahead  -->
 <ng-template let-item="item" #itemTemplate>
-  <span>{{ item.name }}, {{ item.country }}</span>
+  <span>{{ item.name }}, {{ item.country }}</span>  
 </ng-template>
+
+

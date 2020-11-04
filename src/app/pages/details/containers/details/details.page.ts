@@ -36,3 +36,6 @@ export class DetailsPage implements OnInit {
     this.unit$ = this.store.pipe(select(fromConfigSelectors.selectUnitConfig));
   }
 }
+
+
+

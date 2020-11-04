@@ -16,7 +16,7 @@ import { DailyWeatherComponent } from './components/daily-weather/daily-weather.
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: '', component: DetailsPage, canActivate: [DetailsGuard] },
+      { path: '', component: DetailsPage, canActivate: [DetailsGuard] },  /// raiz do modulo  ao tentar rotear para o modulo , ela só sobe se conseguir passar pela validação 
     ]),
     StoreModule.forFeature('details', detailsReducer),
     EffectsModule.forFeature([DetailsEffects]),
@@ -27,7 +27,7 @@ import { DailyWeatherComponent } from './components/daily-weather/daily-weather.
     DailyWeatherComponent,
   ],
   providers: [
-    DetailsGuard,
+    DetailsGuard,   /// está implementado no proprio modulo e não na raiz 
   ],
 })
 export class DetailsModule {

@@ -17,8 +17,8 @@ export class DetailsEffects {
   loadCurrentWeather$ = createEffect(() => this.actions$
     .pipe(
       ofType(fromDetailsActions.loadWeatherDetails),
-      withLatestFrom(this.store.pipe(select(fromRouterSelectors.selectRouterQueryParams))),
-      mergeMap(([, queryParams]: [any, Params]) =>
+      withLatestFrom(this.store.pipe(select(fromRouterSelectors.selectRouterQueryParams))), //// rxjs combina o que vem do observable com o que estamos enviando 
+      mergeMap(([, queryParams]: [any, Params]) => /// ignora o primeiro , e o segundo sao os queryParams 
         combineLatest([
           this.weatherService.getCityWeatherByCoord(queryParams.lat, queryParams.lon),
           this.weatherService.getWeatherDetails(queryParams.lat, queryParams.lon),

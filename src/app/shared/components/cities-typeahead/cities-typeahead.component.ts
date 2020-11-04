@@ -25,7 +25,7 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
 
   constructor(private citiesService: CitiesService,
               @Optional() @Self() public control: NgControl) {
-    control.valueAccessor = this;
+    control.valueAccessor = this;  /// bindando 
   }
 
   ngOnInit() {
@@ -33,7 +33,9 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
       (subscriber: Subscriber<string>) => subscriber.next(this.search)
     )
       .pipe(
-        switchMap((query: string) => this.citiesService.getCities(query))
+        switchMap((query: string) => this.citiesService.getCities(query)) //// recebe a query e faz a request http 
+        /// switchmap interrompe a informação e faz a request , se antes da requisicao terminar ele reeber mais informações ele faz outra requisicao com a nova informacao 
+        
       );
   }
 
@@ -41,8 +43,8 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
     this.onTouched();
     this.onChange(match.item);
   }
-
-  registerOnChange(fn: (value: CityTypeaheadItem) => void) {
+ 
+  registerOnChange(fn: (value: CityTypeaheadItem) => void) {   /// fn = function 
     this.onChange = fn;
   }
 
@@ -54,6 +56,6 @@ export class CitiesTypeaheadComponent implements OnInit, ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  writeValue() {
+  writeValue() {  /// o componente pai nao injeta nada no form control 
   }
 }

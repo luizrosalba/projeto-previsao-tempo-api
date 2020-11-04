@@ -15,6 +15,7 @@ export const homeInitialState: HomeState = {
 }
 
 ///on = quando 
+/// lidando com as ações da aplicação 
 /// 
 const reducer = createReducer(
   homeInitialState,
@@ -23,7 +24,7 @@ const reducer = createReducer(
     fromHomeActions.loadCurrentWeather,  /// quando mudar 
     fromHomeActions.loadCurrentWeatherById, /// quando mudar ir 
     state => ({
-      ...state, /// novo esatdo 
+      ...state, /// clonando estado anterior 
       loading: true,
       error: false,
     }),

@@ -5,7 +5,7 @@ import { RouterState } from './router/router.reducer';
 import { ConfigState, configReducer } from './config/config.reducer';
 
 export interface AppState {
-  router: RouterReducerState<RouterState>,
+  router: RouterReducerState<RouterState>, /// estado 
   config: ConfigState,
 }
 

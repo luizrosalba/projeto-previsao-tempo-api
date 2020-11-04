@@ -86,14 +86,14 @@ export class HomePage implements OnInit, OnDestroy {
     this.componentDestroyed$.next();
     this.componentDestroyed$.unsubscribe();
     this.store.dispatch(fromHomeActions.clearHomeState());
-    this.portalOutlet.detach();
+    this.portalOutlet.detach(); /// destroi o componente 
   }
 
   doSearch() {
     const query = this.searchControl.value;
     this.store.dispatch(fromHomeActions.loadCurrentWeather({ query }));
   }
-
+  /// o toogle é disparado da home e não do componente bookmark 
   onToggleBookmark() {
     const bookmark = new Bookmark();
     bookmark.id = this.cityWeather.city.id;
@@ -103,14 +103,17 @@ export class HomePage implements OnInit, OnDestroy {
     this.store.dispatch(fromHomeActions.toggleBookmark({ entity: bookmark }));
   }
 
+  /// construindo o portal que vai mandar informação para app componente 
+  /// podemos injetar um componente ou um template 
+
   private setupPortal() {
-    const el = document.querySelector('#navbar-portal-outlet');
-    this.portalOutlet = new DomPortalOutlet(
+    const el = document.querySelector('#navbar-portal-outlet');  /// aqui eh o nome da injeção 
+    this.portalOutlet = new DomPortalOutlet(  //// aceita o template ou componente 
       el,
       this.componentFactoryResolver,
       this.appRef,
       this.injector,
     );
-    this.portalOutlet.attach(new ComponentPortal(UnitSelectorComponent));
+    this.portalOutlet.attach(new ComponentPortal(UnitSelectorComponent)); /// anexando um componente que vamos instanciar 
   }
 }

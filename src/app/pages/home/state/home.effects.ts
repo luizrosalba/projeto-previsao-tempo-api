@@ -13,8 +13,8 @@ export class HomeEffects {
 
   loadCurrentWeather$ = createEffect(() => this.actions$
     .pipe(
-      ofType(fromHomeActions.loadCurrentWeather),
-      mergeMap(({ query }) => this.weatherService.getCityWeatherByQuery(query)),
+      ofType(fromHomeActions.loadCurrentWeather), /// qual action vc esta lidando 
+      mergeMap(({ query }) => this.weatherService.getCityWeatherByQuery(query)), /// merge map pois eh um observable na pode ser map 
       catchError((err, caught$) => {
         this.store.dispatch(fromHomeActions.loadCurrentWeatherFailed());
         return caught$;

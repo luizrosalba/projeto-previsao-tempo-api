@@ -1,25 +1,92 @@
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand">JV Weather</a>
-
-  <!-- portal  -->
-  <div id="navbar-portal-outlet"></div>
-</nav>
-
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 bg-light border-right">
-      <ul class="nav flex-column">
+  <nav class="navbar header">
+    <!-- <a class="navbar-brand">Turismo Brasil Agência de Viagens</a> -->
+
+    <div class="row">
+      <ul class="nav flex-row ">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Início</a>
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class="fas fa-store"> </i>Encontre uma de nossas lojas </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/bookmarks">Favoritos</a>
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class="fas fa-phone"></i> Televendas e Central de Atendimento: (21) 1111-1111 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="/bookmarks">  <i class="far fa-question-circle"> </i>Precisa de Ajuda ? </a>
         </li>
       </ul>
     </div>
+  </nav>
+	
+	
 
-    <div class="col-sm-9">
-      <router-outlet></router-outlet>
+  <div class="Faixa">
+    <div class="row">
+      <ul class="nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link navbar-brand " routerLink="/"> <i class="fas fa-plane-departure"></i>Passagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-hotel'></i> Hotéis</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-luggage-cart'> </i>Pacotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-sun'> </i>Consulte o Clima </a>
+        </li>
+      </ul>
     </div>
   </div>
+
+  <div class="col-sm-3 texto-entrada">
+    <div class="well">
+      <p> Olá, confira os melhores pacotes para seu conforto</p>
+    </div>
+  </div>
+
+  
+<div>
+  <div class="row">
+
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" id="usr"  placeholder="Origem: De onde vai sair?">
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <input type="text" class="form-control" id="usr" placeholder="Destino: Para Onde vai ? ">
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group row">
+        <div class="col-10">
+          <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"
+          placeholder="Escolha as datas">
+        </div>
+      </div>
+    </div>
+
+    <div class="col"> <div class="form-group">
+      <input type="text" class="form-control" id="usr" placeholder="1Quarto - 2 Viajantes">
+    </div>
+  </div>
+
+  <div class="col"> <div class="form-group">
+    <button type="button" class="btn btn-primary amarelo">Buscar Pacotes</button>
+  </div>
+</div>
+
+  
+</div>
+    <div class="col-sm-9">
+      <div id="navbar-portal-outlet"></div>
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+
 </div>

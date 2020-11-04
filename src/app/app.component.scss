@@ -1,7 +1,43 @@
 .container-fluid {
-  height: calc(100vh - 56px);
+  height: calc(100vh);
 
   > .row {
     height: 100%;
   }
+
+  background: url("../assets/img/sean-o-KMn4VEeEPR8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh ;
+}
+
+
+
+
+  
+.header{
+  justify-content: flex-end;
+}
+
+.header a{
+  color: #FFDC2C;
+    padding-right: 16px;
+    font-size: 12px;
+    font-family: 'Hind', sans-serif;
+    line-height: 16px;
+    text-decoration: none;
+
+}
+
+.amarelo{
+  
+  background-color:  #FFE561;
+}
+
+.texto-entrada{
+  font-size: 36px;
+    font-family: 'Hind', sans-serif;
+    line-height: 40px;
+    color: #FFF;
+    font-weight: bold;
+    
 }

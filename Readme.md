@@ -1,13 +1,62 @@
 # Criando projeto para consultar a previsao do tempo via API 
 
-- https://openweathermap.org/
-- salvei minha api key 
-- salvei a base do projeto 
-- npm i 
+Este projeto é parte do bootcamp Avanade Fullstack Developer da Digital Innovation One e consiste em consultar uma api de previsão de tempo do site https://openweathermap.org/.
 
-## parte 2 
+
+## Imagem do Projeto :
+![](./pagina.PNG)
+
+
+### Clone o projeto : 
+```
+  git clone https://github.com/luizrosalba/projeto-previsao-tempo-api.git
+```
+### Instale as dependências: 
+```
+  npm i
+```
+
+### Crie uma key no openWeathermap: 
+
+- https://openweathermap.org/
+
+
+
+# JvWeather
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+# Anotações pessoais : 
+
+# parte 2 
 mostrou a aplicação 
-## parte 3 
+# parte 3 
 - mostrou como editar o tslint.json para  permite criar componentes com sufixo de pagina  ajuda na separacao por nomeclatura das responsabilidades
 
   "component-class-suffix": [
@@ -60,7 +109,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
  ```   
-## aula 4 
+# Parte 4
 NGRX é o redux , dispacha acções para mudança da store quando há mudanças para angular 
 
 ![](./Capturar.PNG) 
@@ -104,7 +153,7 @@ src\app\pages\home\state\home.reducer.ts
 
 - entre [] o nome da feature que dispara a ação 
 
-## parte 6 
+# Parte 6
 effects 
 
 iguais ao reducer , reagem as action de forma assincrona usando observables 
@@ -146,7 +195,7 @@ loadCurrentWeather$ = createEffect(() => this.actions$ /// $ para dizer que é o
   );
 ```
 
-## parte 7 
+# Parte 7
 
 vamos criar as actions que o projeto usa 
 
@@ -154,7 +203,7 @@ home reducers.ts
 
 vamos criar os servicos dentro de shared services weather --skipTests True 
 
-## parte 8 
+# Parte 8
 
 - escrevemos os selectors 
 
@@ -228,13 +277,13 @@ temos que dar subscribe nos observables !!
 
 
 
-## Parte 9 
+# Parte 9 
 
 
 - criando o estado do bookmarks que será alterado pelo home 
 
 
-### PArte 10 
+# Parte 10 
 
 
 routerguard : vamos colocar uma condição na rota, o componente só será renderizado se passar por esta condição 
@@ -265,7 +314,7 @@ Vamos usar o router store que coloca o estado da rota na store
 
 - vamos construir um custom serializer para construir um estado mimificado só com as informações utilizadas 
 
-## parte 11 
+# parte 11 
 
 Criamos um router state customizado só colocar no estado as informações que queremos ( lon e lat )
 
@@ -304,7 +353,7 @@ export class CustomRouterSerializer implements RouterStateSerializer<RouterState
 
 ```
 
-### parte 12 
+# parte 12 
 
 - typeadhead 
 
@@ -327,14 +376,14 @@ set disabled state
 write value 
  
 
-### aula 13 
+# Parte 13 
 
 melhorando o city typeahdead para mostrar o pais 
 
 melhorando o template do typeahdera 
 
 
-### aula 14 
+# Parte 14 
 
 selector 
 

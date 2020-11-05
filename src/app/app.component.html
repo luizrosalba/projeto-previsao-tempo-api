@@ -5,88 +5,98 @@
     <div class="row">
       <ul class="nav flex-row ">
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class="fas fa-store"> </i>Encontre uma de nossas lojas </a>
+          <a class="nav-link navbar-brand amarelo" routerLink="/lojas"> <i class="fas fa-store padding-10 amarelo">
+            </i>Encontre uma de nossas lojas </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class="fas fa-phone"></i> Televendas e Central de Atendimento: (21) 1111-1111 </a>
+          <a class="nav-link navbar-brand" routerLink="/"> <i class="fas fa-phone padding-10"></i> Televendas e Central
+            de Atendimento: (21) 1111-1111 </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks">  <i class="far fa-question-circle"> </i>Precisa de Ajuda ? </a>
+          <a class="nav-link navbar-brand" routerLink="/"> <i class="far fa-question-circle padding-10"> </i>Precisa de
+            Ajuda ? </a>
         </li>
       </ul>
     </div>
   </nav>
-	
-	
 
   <div class="Faixa">
     <div class="row">
-      <ul class="nav flex-row">
+      <ul class="nav flex-row margin-left-100px">
+        <li class="nav-item">
+          <img src="../assets/img/logo.png" alt="Girl in a jacket" width="100px" height="100px">
+        </li>
         <li class="nav-item">
           <a class="nav-link navbar-brand " routerLink="/"> <i class="fas fa-plane-departure"></i>Passagens</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-hotel'></i> Hotéis</a>
+          <a class="nav-link navbar-brand" routerLink="/"> <i class='fas fa-hotel'></i> Hotéis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-luggage-cart'> </i>Pacotes</a>
+          <a class="nav-link navbar-brand" routerLink="/"> <i class='fas fa-luggage-cart'> </i>Pacotes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-sun'> </i>Consulte o Clima </a>
+          <a class="nav-link navbar-brand" routerLink="/"> <i class='fas fa-sun'> </i>Consulte o Clima </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="/bookmarks"> <i class='fas fa-sun'> </i>Clima da sua Cidade</a>
+        </li>
+
       </ul>
     </div>
+    <hr>
   </div>
 
-  <div class="col-sm-3 texto-entrada">
+  <div class="col-sm-3 texto-entrada margin-left-100px">
     <div class="well">
-      <p> Olá, confira os melhores pacotes para seu conforto</p>
+      <p> Olá, confira os melhores <span class="amarelo">pacotes</span> para seu conforto</p>
     </div>
   </div>
 
-  
-<div>
-  <div class="row">
 
-    <div class="col">
-      <div class="form-group">
-        <input type="text" class="form-control" id="usr"  placeholder="Origem: De onde vai sair?">
-      </div>
-    </div>
+  <div>
+    <div class="row margin-left-100px">
 
-    <div class="col">
-      <div class="form-group">
-        <input type="text" class="form-control" id="usr" placeholder="Destino: Para Onde vai ? ">
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="form-group row">
-        <div class="col-10">
-          <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"
-          placeholder="Escolha as datas">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="usr" placeholder="Origem: De onde vai sair?">
         </div>
       </div>
+
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="usr" placeholder="Destino: Para Onde vai ? ">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group row">
+          <div class="col-10">
+            <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+              id="example-datetime-local-input" placeholder="Escolha as datas">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="usr" placeholder="1Quarto - 2 Viajantes">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary amarelo">Buscar Pacotes</button>
+        </div>
+      </div>
+
     </div>
 
-    <div class="col"> <div class="form-group">
-      <input type="text" class="form-control" id="usr" placeholder="1Quarto - 2 Viajantes">
-    </div>
-  </div>
+      <div class="fundo-branco margin-left-100px">
+        <div class="col-sm-9">
+          <div id="navbar-portal-outlet"></div>
+          <router-outlet></router-outlet>
+        </div>
 
-  <div class="col"> <div class="form-group">
-    <button type="button" class="btn btn-primary amarelo">Buscar Pacotes</button>
-  </div>
-</div>
-
-  
-</div>
-    <div class="col-sm-9">
-      <div id="navbar-portal-outlet"></div>
-      <router-outlet></router-outlet>
-    </div>
-
-  </div>
-
-
-</div>
+      </div>
+    

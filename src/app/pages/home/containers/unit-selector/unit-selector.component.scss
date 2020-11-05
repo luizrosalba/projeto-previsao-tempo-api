@@ -1,7 +1,9 @@
 div {
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: flex-end;
+  color: black;
+  font-size: 24px;
 
   > span {
     margin-right: 8px;

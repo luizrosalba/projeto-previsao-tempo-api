@@ -1,6 +1,15 @@
 # Criando projeto para consultar a previsao do tempo via API 
 
 Este projeto é parte do bootcamp Avanade Fullstack Developer da Digital Innovation One e consiste em consultar uma api de previsão de tempo do site https://openweathermap.org/.
+Este projeto utilizou conceitos de: 
+
+- Angular 
+- Consumo de dados de uma API (CRUD)
+- NGRX e manipulação de estados
+- Injeção de dependências
+- Dev-tools
+
+Foi criada uma página clone de uma agência de viagens para simular a consulta feita por um usuário
 
 
 ## Imagem do Projeto :
